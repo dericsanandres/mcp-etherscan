@@ -1,15 +1,19 @@
 # MCP Etherscan Server (Python)
 
-A Python implementation of an MCP (Model Context Protocol) server that provides Ethereum blockchain data tools via Etherscan's API. Features include checking ETH balances, viewing transaction history, tracking ERC20 transfers, fetching contract ABIs, monitoring gas prices, and resolving ENS names.
+A **Python implementation** of an MCP (Model Context Protocol) server that provides comprehensive Ethereum blockchain data through Etherscan's API. Built with modern Python tools and designed for seamless integration with Claude Desktop.
+
+🚀 **Ready for Production** | 🐍 **Pure Python** | 🔗 **MCP Compatible** | ⚡ **Fast & Reliable**
 
 ## Features
 
-- **Balance Checking**: Get ETH balance for any Ethereum address
-- **Transaction History**: View recent transactions with detailed information
-- **Token Transfers**: Track ERC20 token transfers with token details
-- **Contract ABI**: Fetch smart contract ABIs for development
-- **Gas Prices**: Monitor current gas prices (Safe Low, Standard, Fast)
-- **ENS Resolution**: Resolve Ethereum addresses to ENS names
+- 💰 **ETH Balance Checking**: Get real-time ETH balance for any Ethereum address
+- 📈 **Transaction History**: View recent transactions with detailed information
+- 🪙 **Token Transfers**: Track ERC20 token transfers with comprehensive token details
+- 📜 **Smart Contract ABI**: Fetch verified smart contract ABIs for development
+- ⛽ **Live Gas Prices**: Monitor current gas prices (Safe, Standard, Fast) in real-time
+- 🏷️ **ENS Resolution**: Resolve Ethereum addresses to ENS names
+- 🔍 **Input Validation**: Robust address validation with clear error messages
+- 🚀 **Modern Architecture**: Built with FastMCP and Pydantic for reliability
 
 ## Prerequisites
 
@@ -70,6 +74,38 @@ source venv/bin/activate
 
 # Run tests
 python run.py test
+```
+
+**Expected Output:**
+```
+🧪 Testing Etherscan Service...
+==================================================
+1. Testing balance check for 0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045
+   Balance: 1,247.832156789012345678 ETH
+   ✓ Balance check successful
+
+2. Testing transaction history for 0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045
+   Found 3 transactions
+   Latest transaction: 0xa1b2c3d4e5...
+   ✓ Transaction history successful
+
+3. Testing token transfers for 0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045
+   Found 3 token transfers
+   Latest transfer: USDC
+   ✓ Token transfers successful
+
+4. Testing gas prices
+   Safe: 12.5 Gwei
+   Standard: 15.2 Gwei
+   Fast: 18.7 Gwei
+   ✓ Gas prices successful
+
+5. Testing contract ABI fetch
+   Contract ABI test completed
+   ✓ All core functions working
+==================================================
+✅ All tests completed successfully!
+The Etherscan service is working correctly.
 ```
 
 ## Running the Server
@@ -139,14 +175,38 @@ To add this server to Claude Desktop:
 
 ### Example Usage in Claude
 
-You can use commands like:
+Once connected, you can interact with Ethereum data naturally:
+
+**Balance Queries:**
 ```
-Check the balance of 0x742d35Cc6634C0532925a3b844Bc454e4438f44e
+Check the balance of 0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045
 ```
-or
+
+**Transaction Analysis:**
 ```
-Show me recent transactions for vitalik.eth
+Show me the last 5 transactions for vitalik.eth
 ```
+
+**Gas Price Monitoring:**
+```
+What are the current Ethereum gas prices?
+```
+
+**Token Transfer Tracking:**
+```
+Find recent USDC transfers for 0x742d35Cc6634C0532925a3b844Bc454e4438f44e
+```
+
+## Network Focus
+
+This server is **specifically designed for Ethereum Mainnet** analysis. For other networks:
+
+- **BSC (Binance Smart Chain)**: Planned as separate `mcp-bsc-server` repository
+- **Polygon**: Planned as separate `mcp-polygon-server` repository  
+- **Arbitrum**: Planned as separate `mcp-arbitrum-server` repository
+- **Other chains**: Each will have dedicated MCP servers for optimal performance
+
+> **Why separate servers?** This modular approach ensures better maintainability, independent deployments, and network-specific optimizations.
 
 ## Development
 

@@ -8,8 +8,8 @@ that provides Ethereum blockchain data tools via Etherscan's API.
 """
 
 __version__ = "1.0.0"
-__author__ = "Your Name"
-__email__ = "your.email@example.com"
+__author__ = "Deric C San Andres"
+__email__ = "dercsanandres@gmail.com"
 
 from .server import main
 

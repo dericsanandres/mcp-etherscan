@@ -1,0 +1,21 @@
+{
+  "name": "mcp-etherscan-server-python",
+  "version": "1.0.0",
+  "description": "A Python MCP server for Ethereum blockchain data via Etherscan API",
+  "main": "src/server.py",
+  "scripts": {
+    "start": "python src/server.py"
+  },
+  "keywords": [
+    "python",
+    "mcp",
+    "ethereum",
+    "etherscan",
+    "blockchain"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "python": ">=3.9"
+  }
+}

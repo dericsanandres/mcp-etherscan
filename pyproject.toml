@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mcp-etherscan-server"
+version = "1.0.0"
+description = "A Python MCP server for Ethereum blockchain data via Etherscan API"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "Your Name", email = "your.email@example.com"}
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
+    "Topic :: Office/Business :: Financial"
+]
+keywords = ["mcp", "ethereum", "etherscan", "blockchain", "crypto"]
+requires-python = ">=3.9"
+dependencies = [
+    "mcp>=1.0.0",
+    "python-dotenv>=1.0.0",
+    "web3>=6.0.0",
+    "requests>=2.31.0",
+    "pydantic>=2.0.0",
+    "eth-utils>=2.0.0"
+]
+
+[project.scripts]
+mcp-etherscan-server = "src.server:main"
+
+[project.urls]
+Homepage = "https://github.com/yourusername/mcp-etherscan-server"
+Repository = "https://github.com/yourusername/mcp-etherscan-server.git"
+Issues = "https://github.com/yourusername/mcp-etherscan-server/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]
+
+[tool.setuptools.package-data]
+"*" = ["*.txt", "*.md"]

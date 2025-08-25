@@ -18,7 +18,7 @@ if ! python3 -c "import sys; exit(0 if sys.version_info >= (3, 9) else 1)"; then
     exit 1
 fi
 
-echo "✓ Python $python_version found"
+echo "Python $python_version found"
 
 # Create virtual environment
 echo "Creating virtual environment..."
@@ -41,7 +41,7 @@ echo "Running validation tests..."
 python validate.py
 
 if [ $? -ne 0 ]; then
-    echo "❌ Validation failed. Please check the errors above."
+    echo "Validation failed. Please check the errors above."
     exit 1
 fi
 
@@ -49,13 +49,13 @@ fi
 if [ ! -f .env ]; then
     echo "Creating .env file from template..."
     cp .env.example .env
-    echo "⚠️  Please edit .env file and add your Etherscan API key"
+    echo "Warning: Please edit .env file and add your Etherscan API key"
 else
-    echo "✓ .env file already exists"
+    echo ".env file already exists"
 fi
 
 echo ""
-echo "✅ Setup complete!"
+echo "Setup complete!"
 echo ""
 echo "Next steps:"
 echo "1. Edit .env file and add your Etherscan API key:"

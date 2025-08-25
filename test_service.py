@@ -28,7 +28,7 @@ def test_etherscan_service():
         print("Please create a .env file with your Etherscan API key")
         return False
     
-    print("🧪 Testing Etherscan Service...")
+    print("Testing Etherscan Service...")
     print("=" * 50)
     
     try:
@@ -44,7 +44,7 @@ def test_etherscan_service():
         balance_float = float(balance.balance_in_eth)
         formatted_balance = f"{balance_float:,.6f}"
         print(f"   Balance: {formatted_balance} ETH")
-        print(f"   ✓ Balance check successful")
+        print(f"   Balance check successful")
         print()
         
         # Test 2: Get transaction history
@@ -54,7 +54,7 @@ def test_etherscan_service():
         if transactions:
             latest_tx = transactions[0]
             print(f"   Latest transaction: {latest_tx.hash[:10]}...")
-        print(f"   ✓ Transaction history successful")
+        print(f"   Transaction history successful")
         print()
         
         # Test 3: Get token transfers
@@ -64,7 +64,7 @@ def test_etherscan_service():
         if transfers:
             latest_transfer = transfers[0]
             print(f"   Latest transfer: {latest_transfer.token_symbol}")
-        print(f"   ✓ Token transfers successful")
+        print(f"   Token transfers successful")
         print()
         
         # Test 4: Get gas prices
@@ -73,7 +73,7 @@ def test_etherscan_service():
         print(f"   Safe: {gas_prices.safe_gwei} Gwei")
         print(f"   Standard: {gas_prices.propose_gwei} Gwei")
         print(f"   Fast: {gas_prices.fast_gwei} Gwei")
-        print(f"   ✓ Gas prices successful")
+        print(f"   Gas prices successful")
         print()
         
         # Test 5: Test contract ABI (using USDC contract - well known)
@@ -82,19 +82,19 @@ def test_etherscan_service():
         try:
             abi = service.get_contract_abi(usdc_contract)
             print(f"   ABI retrieved successfully ({len(abi)} characters)")
-            print(f"   ✓ Contract ABI successful")
+            print(f"   Contract ABI successful")
         except Exception as e:
             print(f"   Contract ABI test completed (some contracts may not be verified)")
-            print(f"   ✓ All core functions working")
+            print(f"   All core functions working")
         print()
         
         print("=" * 50)
-        print("✅ All tests completed successfully!")
+        print("All tests completed successfully!")
         print("The Etherscan service is working correctly.")
         return True
         
     except Exception as e:
-        print(f"❌ Test failed: {e}")
+        print(f"Test failed: {e}")
         return False
 
 def main():
@@ -102,10 +102,10 @@ def main():
     success = test_etherscan_service()
     
     if success:
-        print("\n🎉 You can now run the MCP server with: python src/server.py")
+        print("\nYou can now run the MCP server with: python src/server.py")
         sys.exit(0)
     else:
-        print("\n💥 Please fix the issues above before running the server")
+        print("\nPlease fix the issues above before running the server")
         sys.exit(1)
 
 if __name__ == "__main__":

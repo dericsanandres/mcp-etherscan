@@ -10,7 +10,7 @@ import os
 
 def run_test():
     """Run the test script"""
-    print("🧪 Running Etherscan service tests...\n")
+    print("Running Etherscan service tests...\n")
     
     try:
         result = subprocess.run([sys.executable, "test_service.py"], 
@@ -22,23 +22,23 @@ def run_test():
         
         return result.returncode == 0
     except subprocess.TimeoutExpired:
-        print("❌ Test timed out after 30 seconds")
+        print("Test timed out after 30 seconds")
         return False
     except Exception as e:
-        print(f"❌ Error running tests: {e}")
+        print(f"Error running tests: {e}")
         return False
 
 def run_server():
     """Run the MCP server"""
-    print("🚀 Starting MCP Etherscan Server...\n")
+    print("Starting MCP Etherscan Server...\n")
     print("Press Ctrl+C to stop the server")
     
     try:
         subprocess.run([sys.executable, "src/server.py"])
     except KeyboardInterrupt:
-        print("\n👋 Server stopped by user")
+        print("\nServer stopped by user")
     except Exception as e:
-        print(f"❌ Error running server: {e}")
+        print(f"Error running server: {e}")
 
 def main():
     """Main function"""

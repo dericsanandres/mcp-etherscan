@@ -2,18 +2,18 @@
 
 A **Python implementation** of an MCP (Model Context Protocol) server that provides comprehensive Ethereum blockchain data through Etherscan's API. Built with modern Python tools and designed for seamless integration with Claude Desktop.
 
-🚀 **Ready for Production** | 🐍 **Pure Python** | 🔗 **MCP Compatible** | ⚡ **Fast & Reliable**
+**Ready for Production** | **Pure Python** | **MCP Compatible** | **Fast & Reliable**
 
 ## Features
 
-- 💰 **ETH Balance Checking**: Get real-time ETH balance for any Ethereum address
-- 📈 **Transaction History**: View recent transactions with detailed information
-- 🪙 **Token Transfers**: Track ERC20 token transfers with comprehensive token details
-- 📜 **Smart Contract ABI**: Fetch verified smart contract ABIs for development
-- ⛽ **Live Gas Prices**: Monitor current gas prices (Safe, Standard, Fast) in real-time
-- 🏷️ **ENS Resolution**: Resolve Ethereum addresses to ENS names
-- 🔍 **Input Validation**: Robust address validation with clear error messages
-- 🚀 **Modern Architecture**: Built with FastMCP and Pydantic for reliability
+- **ETH Balance Checking**: Get real-time ETH balance for any Ethereum address
+- **Transaction History**: View recent transactions with detailed information
+- **Token Transfers**: Track ERC20 token transfers with comprehensive token details
+- **Smart Contract ABI**: Fetch verified smart contract ABIs for development
+- **Live Gas Prices**: Monitor current gas prices (Safe, Standard, Fast) in real-time
+- **ENS Resolution**: Resolve Ethereum addresses to ENS names
+- **Input Validation**: Robust address validation with clear error messages
+- **Modern Architecture**: Built with FastMCP and Pydantic for reliability
 
 ## Prerequisites
 
@@ -78,33 +78,33 @@ python run.py test
 
 **Expected Output:**
 ```
-🧪 Testing Etherscan Service...
+Testing Etherscan Service...
 ==================================================
 1. Testing balance check for 0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045
    Balance: 1,247.832156789012345678 ETH
-   ✓ Balance check successful
+   Balance check successful
 
 2. Testing transaction history for 0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045
    Found 3 transactions
    Latest transaction: 0xa1b2c3d4e5...
-   ✓ Transaction history successful
+   Transaction history successful
 
 3. Testing token transfers for 0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045
    Found 3 token transfers
    Latest transfer: USDC
-   ✓ Token transfers successful
+   Token transfers successful
 
 4. Testing gas prices
    Safe: 12.5 Gwei
    Standard: 15.2 Gwei
    Fast: 18.7 Gwei
-   ✓ Gas prices successful
+   Gas prices successful
 
 5. Testing contract ABI fetch
    Contract ABI test completed
-   ✓ All core functions working
+   All core functions working
 ==================================================
-✅ All tests completed successfully!
+All tests completed successfully!
 The Etherscan service is working correctly.
 ```
 
